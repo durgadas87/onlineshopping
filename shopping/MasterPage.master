@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="~/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<%@ Register Src="~/Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link rel="stylesheet" href="stylesht.css" type="text/css" />
+    <title>Online Shopping</title>
+   
+    <style type="text/css">
+        #Img1
+        {
+            width: 366px;
+            height: 321px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+     <table width="100%">
+        <tr style="width:20%; height:5">
+            <td>
+                <uc1:Header ID="UcHeader1" runat="server" />
+                <asp:Label ID="lblUser" runat="server" Text="" BackColor="White" Font-Bold="True" Font-Italic="True" ForeColor="#FF8080"></asp:Label>
+            </td>
+        </tr>
+         <tr>
+            <td style="width:70%;height:100%" valign="top"> <%--   background-color:#ccccff;--%>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+           
+        </tr>
+        <tr style="width:20%; height:5%">
+            <td colspan="3">
+                <uc2:Footer ID="UcFooter1" runat="server" />
+            </td>
+        </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
